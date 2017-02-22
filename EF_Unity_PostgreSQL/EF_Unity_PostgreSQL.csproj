@@ -166,9 +166,26 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\ITaxRateContext.cs" />
-    <Compile Include="Models\TaxRate.cs" />
-    <Compile Include="Models\TaxRateContext.cs" />
+    <Compile Include="Models\Context\IOAuthContext.cs" />
+    <Compile Include="Models\Context\IReportContext.cs" />
+    <Compile Include="Models\Context\OAuthContext.cs" />
+    <Compile Include="Models\Context\ReportContext.cs" />
+    <Compile Include="Models\DAL\BaseEntity.cs" />
+    <Compile Include="Models\DAL\LineItem.cs" />
+    <Compile Include="Models\DAL\OAuth.cs" />
+    <Compile Include="Models\DAL\Report.cs" />
+    <Compile Include="Models\DAL\State.cs" />
+    <Compile Include="Models\Context\ITaxRateContext.cs" />
+    <Compile Include="Models\DAL\TaxRate.cs" />
+    <Compile Include="Models\Repository\GenereicRepository.cs" />
+    <Compile Include="Models\Repository\IGenereicRepository.cs" />
+    <Compile Include="Models\Repository\IOAuthRepository.cs" />
+    <Compile Include="Models\Repository\IReportRepository.cs" />
+    <Compile Include="Models\Repository\ITaxRateRepository.cs" />
+    <Compile Include="Models\Repository\OAuthRepository.cs" />
+    <Compile Include="Models\Repository\ReportRepository.cs" />
+    <Compile Include="Models\Repository\TaxRateRepository.cs" />
+    <Compile Include="Models\Context\TaxRateContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -183,6 +200,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\Business\" />
     <Folder Include="Views\Home\" />
   </ItemGroup>
   <PropertyGroup>

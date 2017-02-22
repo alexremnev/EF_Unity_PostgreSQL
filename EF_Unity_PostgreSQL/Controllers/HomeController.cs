@@ -1,32 +1,24 @@
-﻿using System.Collections.Generic;
-using System.Data.Entity.Infrastructure;
-using System.Linq;
-using System.Text;
-using System.Web.Mvc;
-using EF_Unity_PostgreSQL.Models;
-using Microsoft.Practices.Unity;
+﻿using System.Web.Mvc;
+using EF_Unity_PostgreSQL.Models.Repository;
 
 namespace EF_Unity_PostgreSQL.Controllers
 {
     public class HomeController : Controller
     {
-        public HomeController(ITaxRateContext context)
+        public HomeController(ITaxRateRepository taxRateRepository, IOAuthRepository oAuthRepository)
         {
-            _context = context;
+            _taxRateRepository = taxRateRepository;
+            _oAuthRepository = oAuthRepository;
         }
 
-        [Dependency]
-        public ITaxRateContext _context { get; set; }
-        
+        private readonly ITaxRateRepository _taxRateRepository;
+        private readonly IOAuthRepository _oAuthRepository;
+
         public ActionResult Index()
         {
-            var list = _context.TaxRates.ToList();
-            var str = new StringBuilder();
-            foreach (var taxRate in list)
-            {
-                str.Append($"Id ={taxRate.Id}, countrySubDivision = {taxRate.CountrySubDivision}, tax ={taxRate.Tax} ");
-            }
-            return Content(str.ToString());
+            _oAuthRepository.Delete();
+            var countrySubDivisionCode = _taxRateRepository.Get(3.ToString());
+            return Content(countrySubDivisionCode.CountrySubDivisionCode);
         }
     }
 }
