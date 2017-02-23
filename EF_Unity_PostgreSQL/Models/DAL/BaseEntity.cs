@@ -12,6 +12,6 @@ namespace EF_Unity_PostgreSQL.Models.DAL
         public string CustomerName { get; set; }
         public string ShipToAddress { get; set; }
         [ForeignKey("ReportId")]
-        public IList<LineItem> LineItems { get; set; }
+        public virtual IList<LineItem> LineItems { get; set; }
     }
 }
