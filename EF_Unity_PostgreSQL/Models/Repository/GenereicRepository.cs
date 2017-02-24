@@ -85,6 +85,5 @@ namespace EF_Unity_PostgreSQL.Models.Repository
                 throw;
             }
         }
-
     }
 }

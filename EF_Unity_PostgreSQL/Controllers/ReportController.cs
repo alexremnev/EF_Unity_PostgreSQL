@@ -19,7 +19,7 @@ namespace EF_Unity_PostgreSQL.Controllers
             _services.Add(estimateService);
         }
         private static readonly ILog Log = LogManager.GetLogger<ReportController>();
-        private readonly IList<IPersistable> _services;
+        private readonly IList<IPersistable> _services = new List<IPersistable>();
 
         public ActionResult Save()
         {

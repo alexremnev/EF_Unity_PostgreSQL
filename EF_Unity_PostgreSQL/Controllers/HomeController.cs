@@ -20,7 +20,7 @@ namespace EF_Unity_PostgreSQL.Controllers
         {
             _oauthService = oAuthService;
             _notificationService = notificationService;
-        }
+      }
 
         private readonly IOAuthService _oauthService;
         private readonly INotificationService _notificationService;
@@ -33,7 +33,7 @@ namespace EF_Unity_PostgreSQL.Controllers
         private static readonly string ConsumerSecret = ConfigurationManager.AppSettings["ConsumerSecret"];
         private static readonly string BaseUrl = ConfigurationManager.AppSettings["BaseUrl"];
         private readonly State state = new State();
-
+      
         public ActionResult Index()
         {
             try

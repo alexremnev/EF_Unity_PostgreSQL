@@ -280,7 +280,8 @@
     </Compile>
     <Compile Include="Models\Business\BaseService.cs" />
     <Compile Include="Models\Business\CreditMemoService.cs" />
-    <Compile Include="Models\Business\CryptoEngine.cs" />
+    <Compile Include="Models\Business\RC5.cs" />
+    <Compile Include="Models\DAL\EncryptedAttribute.cs" />
     <Compile Include="Models\Business\EstimateService.cs" />
     <Compile Include="Models\Business\IBaseService.cs" />
     <Compile Include="Models\Business\ICreditMemoService.cs" />

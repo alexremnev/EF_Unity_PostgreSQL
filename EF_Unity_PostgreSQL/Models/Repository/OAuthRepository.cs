@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using EF_Unity_PostgreSQL.Models.Context;
 using EF_Unity_PostgreSQL.Models.DAL;
